@@ -8,32 +8,51 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
     <header>
-        <a href="#inicio"><img class="logo" src="aprender-en-linea.png" alt="logo"/></a>
+        <a href="#inicio"><img class="logo" src="Diseño YD.png" alt="logo"/></a>
        <nav> 
       
- <ul id="menu">       
- <li class="navegador"> <a  href="#inicio">INICIO</a></li> 
- <li class="navegador"><a href="#Contacto">CONTACTO</a>   </nav></li>
-        </ul>       
+     <ul id="menu">    
+
+    <li class="navegador active ">
+     <a  href="#inicio">INICIO</a></li> 
+    <li class="navegador" >
+    <a href="#Contacto">CONTACTO</a>  
+   
+    <button class="Switch " id="switch">
+        <span class="click"><i class="fa-regular fa-sun "></i></span>
+        <span class="click"><i class="fa-solid fa-moon"></i></span>
+    </button>
+ 
+    
+ </nav></li>
+ 
+  </ul>       
        
-            
     </header>
 <main>
+    
 <section id="inicio">
-    <figure><img class="Foto" src="foto de perfil.jpeg" alt=" foto de Yoli">
+   
+    <figure><img class="Foto" src="./img/foto curriculum.jpeg" alt=" foto de Yoli">
     </figure>
-<article><h1> Hola! Soy Yolimar</h1>
+<article class="presentacion">
+    
+    
+    <h1> Hola! Soy Yolimar</h1>
     <p>
         Soy docente de profesión pero con ganas de emprender en nuevos campos. Por eso, me estoy capacitando en el área de las tecnologías y la programación.
         Quiero aprender todo lo relacionado  y en un futuro conseguir un empleo y desarrollarme en este área.
     </p>
+    <a class="boton" href="Curriculum Cv Profesional Moderno Rojo.pdf" target="_blank" download="pdf"><strong>DESCARGAR CV</strong>  </a>
 </article>
 
-<a class="boton" href="/YOLIMAR DUBRONT DE PONCE curriculo - copia.docx"><strong>DESCARGAR CV</strong>  </a>
+
 </section>
+
 <section id="Contacto">
     <article class="hablemos">
     <h2>HABLEMOS!</h2>
@@ -54,7 +73,8 @@
 
 <footer> <strong>Código Latam</strong> </footer>
 
-    
-
+<script src="https://kit.fontawesome.com/7049a70a16.js" crossorigin="anonymous"></script>   
+<script src="./js/main.js"></script>
+<script src="./js/mainDos.js"></script>
 </body>
 </html>

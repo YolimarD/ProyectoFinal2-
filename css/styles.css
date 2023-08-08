@@ -1,7 +1,11 @@
 /* En este archivo escriban su CSS */
 
 /* Fonts */
-/* Importar aquí la font */
+/* I
+mportar aquí la font */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Roboto:ital@1&display=swap');
+
+
 
 * {
     box-sizing: border-box;
@@ -13,12 +17,78 @@
 
   body{
     font-family: 'Roboto', sans-serif;
-    background-color: #fbfbfb;
+    background-color:#fbfbfb;
     font-size: 18px;
     line-height: 1.2;
     }
 
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Roboto:ital@1&display=swap');
+    body.dark{
+     background-color: #5f5f5f;
+     color: #fbfbfb;
+    }
+
+    body.dark a.boton{
+    border-radius: 10px;
+
+
+    }
+
+body.dark article .hablemos{
+    background-color: cadetblue;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+
+}
+body.dark header{
+    color: #0f0f0f;
+}
+
+.Switch {
+    background-color:#422c2c;
+    border-radius: 1000px;
+    border:none;
+    position:relative;
+    cursor:pointer;
+    display:flex;
+    outline:none;
+    
+}
+
+.Switch::after{
+    content:"";
+    display:block;
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    background: #fbfbfb;
+    top:0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all; 
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+ }
+
+ .Switch.actives {
+    background-color: orange;
+    color: #000000;
+   
+}
+.Switch.actives::after{
+    right: 0; 
+    left: unset;
+}
+
+ .Switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color:#fbfbfb;
+}
+
 
 header{
     display: flex;
@@ -26,7 +96,7 @@ header{
     padding: 16px;
     height: 90px;
     width: 100%;
-    background-color: #fbfbfb;
+    background-color:darkcyan;
     position: fixed;
     top: 0;
     left: 0;
@@ -39,16 +109,16 @@ nav{
 }
 
 #menu{
-display: flex;
+    display: flex;
     font-size: 20px;
 
 }
 
 .logo{
-    width: 90px;
-    max-width: 65%;     
+    width: 100px;
+    max-width: 100%;     
     position: relative;
-    height: 90px;
+    height: 100px;
     min-height: 20px;
      
  top: -15px;
@@ -72,17 +142,18 @@ h2{
     
     }
 .boton{
-    background-color: #af599e;
+    background-color: darkcyan;
     border-radius:  100px;
     color: #fbfbfb;
     font-size: 20px;
-    
+    padding: 12px 20px;
+    display: inline-block;
     
 
 }
 footer{
-    background-color: #af599e;
-    color: #fbfbfb;
+     background-color:rgb(46, 119, 119);
+    color: #000000;
     font-size: 18px;
     height: 90px;
     text-align: center;
@@ -101,24 +172,26 @@ footer{
 
 
 .hablemos {
-    background: rgba(175, 89, 158, 0.3);
+    background: rgb(46, 119, 119);
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 60px;
+    border-radius: 30px;
     max-width: 600px;
-    
+    height: 50%;
     
     
 }
 #inicio{
     min-height: 100vh;
-    margin-right: 40px;
+    margin-right: 20px;
+    
     
 }
 
 .inicio{
 
 margin-right: 10px;
+
 
 }
 /* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
@@ -135,8 +208,20 @@ ul {
         
     
 }
+ul#menu{
+    display: flex;
+    font-size: 20px;
+    }
+ li.navegador a {
+    padding: 16px;
+    display: inline-block;
+ }
+ li.navegador a:hover, .active{ 
+    background-color:cornflowerblue;
+    color:#fbfbfb;
+    transition: background-color 0,3s;
 
- 
+ }
   
 
  .iconos a img{
@@ -167,9 +252,10 @@ main {
 
 }
 .Foto {
-    width:300px;
+    width: 200px;
     
-    border-radius: 200px;
+    border-radius: 150px;
+
     
 }
 .icono{
@@ -178,7 +264,6 @@ main {
 }
 
 .iconos{
-
  
     display: flex;
     margin-top: 20px;
@@ -197,9 +282,19 @@ section{
 }
 
 
+@media (min-width: 1024px){
+section#inicio{
+display: flex;
+flex-direction: row;
+}
+article.presentacion{
+    text-align: left;
+    width: 80%;
+}
+   
 
 
-
+}
 
 
 
